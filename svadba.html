@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Саша+Валера=&#9829;</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<style>
+			*,
+			*:after,
+			*:before {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				font-family: "Nunito Sans", sans-serif;
+				font-weight: 300;
+				font-size: 20px;
+				background-color: #fff;
+			}
+
+			a {
+				text-decoration: none;
+				outline: none;
+			}
+
+			img {
+				max-width: 100%;
+				font-size: 16px;
+			}
+
+			li {
+				margin-bottom: 10px;
+			}
+
+			button {
+				outline: none;
+				background-color: #fff;
+				border: none;
+			}
+
+			.countdown-title {
+				text-align: center;
+				font-weight: 600;
+				font-size: 20px;
+				margin: 40px 0px 20px;
+			}
+
+			.countdown {
+				font-weight: 100;
+				text-align: center;
+				font-size: 24px;
+				max-width: 300px;
+				margin: 0 auto;
+			}
+
+			.countdown-number {
+				padding: 10px;
+				border-radius: 3px;
+			}
+
+			.countdown-time {
+				padding: 10px;
+				background-color: #ed1240;
+				color: #fff;
+				border-radius: 3px;
+			}
+
+			.countdown-text {
+				padding-top: 5px;
+				font-size: 16px;
+			}
+
+			.title {
+				font-weight: 800;
+				display: inline-block;
+				margin-top: 20px;
+			}
+
+			.title::after {
+				content: "";
+				display: block;
+				margin: 5px 0;
+				width: 100%;
+				height: 5px;
+				border-radius: 3px;
+				background-color: #ed1240;
+			}
+
+			.link {
+				color: #ed1240 !important;
+				font-weight: 600;
+				display: inline-block;
+			}
+
+			.link-btn {
+				background-color: #ed1240;
+				padding: 10px;
+				border-radius: 3px;
+				color: #fff !important;
+			}
+
+			.mb-20 {
+				margin-bottom: 20px;
+			}
+
+			.mb-40 {
+				margin-bottom: 40px;
+			}
+
+			.centered {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.donate {
+				border-radius: 3px;
+				padding: 10px;
+				border: 2px solid #ed1240;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.btn-copy {
+				width: 32px;
+			}
+
+			.number {
+				font-weight: 600;
+				color: #ed1240;
+				transition: 0.3s all;
+			}
+
+			.notify {
+				background-color: #ed1240;
+				color: #fff;
+				padding: 5px;
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				font-weight: 600;
+			}
+
+			.bold {
+				font-weight: 800;
+			}
+
+			.preloader {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #ed1240;
+				color: #fff;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.preloader .title {
+				font-size: 24px;
+				text-align: center;
+				margin-top: 40px;
+			}
+
+			.shuf {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+			}
+
+			@keyframes delay-hide {
+				0% {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				95% {
+					opacity: 1;
+					visibility: visible;
+				}
+
+				100% {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			.delay-hide {
+				animation-name: delay-hide;
+				animation-duration: 5s;
+				transition: 0.3s all;
+				animation-fill-mode: forwards;
+			}
+
+			.color-alert {
+				color: #ea2027;
+			}
+
+			.bg-alert {
+				background-color: #ea2027;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="preloader delay-hide">
+			<div class="shuf">
+				<img
+					src="https://drive.google.com/uc?export=view&id=17y4tqpYwsjG1rHZn5Ja-91M-j1fzLcRD"
+					alt="shufik"
+				/>
+			</div>
+			<h1 class="title">Ну что, заждались? &#8986;</h1>
+		</div>
+
+		<main class="container-sm">
+			<div class="px-4 py-5 my-5 text-center">
+				<img
+					class="d-block mx-auto mb-4"
+					src="https://drive.google.com/uc?export=view&id=1U7ogEKp6y0QnIqCQHmPu070SHr5hmIR0"
+					alt="hero"
+				/>
+				<h2 class="display-4 fw-bold">3 сентября 2022</h2>
+				<div class="col-lg-6 mx-auto">
+					<p class="lead mb-4">День, когда горят костры рябин</p>
+				</div>
+				<h1 class="display-5 fw-bold">Саша и Валера</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">Наша свадьба</h1>
+				</div>
+				<div class="col-12 mb-20">
+					<ul>
+						<li>
+							<b class="bold">10:15</b> - Церемония бракосочитания: мы скажем
+							заветное слово, пофотографируемся и выдвинемся к ресторану
+						</li>
+						<li>
+							<b class="bold">13:00</b> - Сбор гостей в ресторане Шишкин
+							экопарка Чкаловские дачи: пока все подтягиваются, можно пропустить
+							бокал игристого и закусить фруктами за беседой с новым
+							родственником. Кто - на своей машине, перед входом на территорию
+							парка есть большая парковка.
+						</li>
+						<li>
+							<b class="bold">14:00</b> - Свадебный банкет: тут начнется самое
+							интересное - живая музыка, конкурсы, поздравления.
+						</li>
+						<li>
+							<b class="bold">20:00</b> - Банкет подошел к концу: далее каждый
+							может проводить время на своё усмотрение. При желании можно
+							остаться в ресторане, он работает до 22:00. На территории парка
+							есть где погулять.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">Схема рассадки</h1>
+				</div>
+				<div class="col-12 mb-20">
+					<img
+						src="https://drive.google.com/uc?export=view&id=1V6EJqLgCvnAdB4jVEWEUZq7gZqetUrNH"
+						alt="placement"
+					/>
+				</div>
+				<div class="col-12 mb-20">
+					Если плохо видно, можно
+					<a
+						href="https://drive.google.com/uc?export=view&id=1V6EJqLgCvnAdB4jVEWEUZq7gZqetUrNH"
+						download=""
+						class="link"
+						target="_blank"
+						>скачать</a
+					>
+					изображение либо увеличить его движением как на картинке ниже
+				</div>
+				<div class="col-12 centered mb-20">
+					<img
+						src="https://drive.google.com/uc?export=view&id=1hZYRZK09Th2-LEhD-QZ3x4zfbxjoY62f"
+						alt="zoom"
+						width="46px"
+					/>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">Где мы будем спать?</h1>
+				</div>
+				<div class="col-12 mb-20">
+					<p>
+						На территории парка расположены домики, в которых мы можем остаться
+						на ночь.
+					</p>
+					<p>В номере будем размещаться по четыре человека.</p>
+					<p>
+						Комплектация домика: двуспальная кровать, дополнительные спальные
+						места, санузел с душевой, мини-холодильник, чайник, бокалы,
+						постельные и гигиенические принадлежности, полотенца, чай и питьевая
+						вода.
+					</p>
+					<p>
+						На следующий день с 10.00 до 12.00 в ресторане Шишкин будет подан
+						завтрак.
+					</p>
+					<p>Время заезда после 14.00</p>
+					<p>Время выезда до 12.00</p>
+					<p>
+						<a href="tel:873833270000" class="link">+7 383 327-00-00</a> —
+						администрация парка
+					</p>
+					<p>Мобильная связь на территории парка не стабильная</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">Как мы расселимся?</h1>
+				</div>
+				<div class="col-12 mb-20">
+					<p><b class="bold">Домик №1:</b> Таня, Андрей, Люба, Сережа</p>
+					<p><b class="bold">Домик №2:</b> Жанна, Рафис, Галя, Фая</p>
+					<p><b class="bold">Домик №3:</b> Руслан, Вика, Коля, Альбина</p>
+					<p><b class="bold">Домик №4:</b> Катя, Дима, Антон, Маша</p>
+					<p><b class="bold">Домик №5:</b> Саша, Леша, Регина, Андрей</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">А если я не остаюсь?</h1>
+				</div>
+				<div class="col-12 mb-20">Мы вызовем вам такси.</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">Фото на память</h1>
+				</div>
+				<div class="col-12 mb-20">
+					В течение празднования вы можете сделать фотографию на Polaroid и
+					сразу забрать моментальный снимок себе на память о нашей свадьбе.
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 mb-20">
+					<h1 class="title">А где ресторан?</h1>
+				</div>
+				<div class="col-12">
+					<p>
+						На территории экопарка
+						<a
+							href="https://chkalovskie.ru/restaurant"
+							class="link"
+							target="_blank"
+							>Чкаловские дачи</a
+						>
+						по адресу ​микрорайон Дом отдыха Мочище, 4 к1.
+						Уютрая атмосфера, вид на лес из окон, свежий воздух и, говорят,
+						белки там водятся!
+					</p>
+				</div>
+				<div class="col-12 mb-20">
+					<iframe
+						id="map_499678693"
+						frameborder="0"
+						width="100%"
+						height="300px"
+						sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+					></iframe>
+				</div>
+				<div class="col-12 mb-20 centered">
+					<a href="https://go.2gis.com/tzhy0y" target="_blank" class="link-btn"
+						>Как проехать от вокзала</a
+					>
+				</div>
+			</div>
+		</main>
+
+		<footer class="container-sm mb-40">
+			<h2 class="countdown-title">Осталось перевернуть календарь</h2>
+			<div id="countdown" class="countdown row">
+				<div class="countdown-number col">
+					<span class="days countdown-time"></span>
+					<span class="countdown-text">раз</span>
+				</div>
+				<!-- <div class="countdown-number col">
+					<span class="hours countdown-time"></span>
+					<span class="countdown-text">Часов</span>
+				</div>
+				<div class="countdown-number col">
+					<span class="minutes countdown-time"></span>
+					<span class="countdown-text">Минут</span>
+				</div>
+				<div class="countdown-number col">
+					<span class="seconds countdown-time"></span>
+					<span class="countdown-text">Секунд</span>
+				</div> -->
+			</div>
+		</footer>
+
+		<!-- Карта 2Гис -->
+		<script type="text/javascript">
+			(function (e, t) {
+				var r = document.getElementById(e);
+				r.contentWindow.document.open(),
+					r.contentWindow.document.write(atob(t)),
+					r.contentWindow.document.close();
+			})(
+				"map_499678693",
+				"PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUpe3ZhciB0PUpTT04ucGFyc2UoZSkscj10Lm9yZGVyZWRHZW9tZXRyaWVzLG49dC5tYXBQb3NpdGlvbixhPXQuaXNXaGVlbFpvb21FbmFibGVkO2Z1bmN0aW9uIG8oZSl7cmV0dXJuIGRlY29kZVVSSUNvbXBvbmVudChhdG9iKGUpLnNwbGl0KCIiKS5tYXAoZnVuY3Rpb24oZSl7cmV0dXJuIiUiKygiMDAiK2UuY2hhckNvZGVBdCgwKS50b1N0cmluZygxNikpLnNsaWNlKC0yKX0pLmpvaW4oIiIpKX1ERy50aGVuKGZ1bmN0aW9uKCl7dmFyIGU9REcubWFwKCJtYXAiLHtjZW50ZXI6W24ubGF0LG4ubG9uXSx6b29tOm4uem9vbSxzY3JvbGxXaGVlbFpvb206YSx6b29tQ29udHJvbDohYX0pO0RHLmdlb0pTT04ocix7c3R5bGU6ZnVuY3Rpb24oZSl7dmFyIHQscixuLGEsbztyZXR1cm57ZmlsbENvbG9yOm51bGw9PT0odD1lKXx8dm9pZCAwPT09dD92b2lkIDA6dC5wcm9wZXJ0aWVzLmZpbGxDb2xvcixmaWxsT3BhY2l0eTpudWxsPT09KHI9ZSl8fHZvaWQgMD09PXI/dm9pZCAwOnIucHJvcGVydGllcy5maWxsT3BhY2l0eSxjb2xvcjpudWxsPT09KG49ZSl8fHZvaWQgMD09PW4/dm9pZCAwOm4ucHJvcGVydGllcy5zdHJva2VDb2xvcix3ZWlnaHQ6bnVsbD09PShhPWUpfHx2b2lkIDA9PT1hP3ZvaWQgMDphLnByb3BlcnRpZXMuc3Ryb2tlV2lkdGgsb3BhY2l0eTpudWxsPT09KG89ZSl8fHZvaWQgMD09PW8/dm9pZCAwOm8ucHJvcGVydGllcy5zdHJva2VPcGFjaXR5fX0scG9pbnRUb0xheWVyOmZ1bmN0aW9uKGUsdCl7cmV0dXJuInJhZGl1cyJpbiBlLnByb3BlcnRpZXM/REcuY2lyY2xlKHQsZS5wcm9wZXJ0aWVzLnJhZGl1cyk6REcubWFya2VyKHQse2ljb246ZnVuY3Rpb24oZSl7cmV0dXJuIERHLmRpdkljb24oe2h0bWw6IjxkaXYgY2xhc3M9J2J1bGxldC1tYXJrZXInIHN0eWxlPSdib3JkZXItY29sb3I6ICIrZSsiOyc+PC9kaXY+IixjbGFzc05hbWU6Im92ZXJyaWRlLWRlZmF1bHQiLGljb25TaXplOlsyMCwyMF0saWNvbkFuY2hvcjpbMTAsMTBdfSl9KGUucHJvcGVydGllcy5jb2xvcil9KX0sb25FYWNoRmVhdHVyZTpmdW5jdGlvbihlLHQpe2UucHJvcGVydGllcy5kZXNjcmlwdGlvbiYmdC5iaW5kUG9wdXAobyhlLnByb3BlcnRpZXMuZGVzY3JpcHRpb24pLHtjbG9zZUJ1dHRvbjohMCxjbG9zZU9uRXNjYXBlS2V5OiEwfSksZS5wcm9wZXJ0aWVzLnRpdGxlJiZ0LmJpbmRUb29sdGlwKG8oZS5wcm9wZXJ0aWVzLnRpdGxlKSx7cGVybWFuZW50OiEwLG9wYWNpdHk6MSxjbGFzc05hbWU6InBlcm1hbmVudC10b29sdGlwIn0pfX0pLmFkZFRvKGUpfSl9KSgneyJvcmRlcmVkR2VvbWV0cmllcyI6W3sidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7ImNvbG9yIjoiIzcyMDliNyIsInRpdGxlIjoiMEtEUXRkR0IwWUxRdnRHQTBMRFF2U0FpMEtqUXVOR0kwTHJRdU5DOUlnPT0iLCJkZXNjcmlwdGlvbiI6IlBIQSs4SitSaXlEUW90R0QwWUlnMFlIUXN0Q3cwTFRSak5DeDBMQWhQQzl3UGc9PSIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbODIuODMzNjYyLDU1LjEyMjg0XX0sImlkIjo4MzF9XSwibWFwUG9zaXRpb24iOnsibGF0Ijo1NS4xMjE5NzQ2NTQ4NTAwNSwibG9uIjo4Mi44MzQ2ODI0NjQ1OTk2Miwiem9vbSI6MTN9LCJpc1doZWVsWm9vbUVuYWJsZWQiOnRydWV9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4="
+			);
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				// Счетчик
+				function getTimeRemaining(endTime) {
+					let t = Date.parse(endTime) - Date.parse(new Date());
+					let seconds = Math.floor((t / 1000) % 60);
+					let minutes = Math.floor((t / 1000 / 60) % 60);
+					let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+					let days = Math.floor(t / (1000 * 60 * 60 * 24));
+
+					return {
+						total: t,
+						days: days,
+						hours: hours,
+						minutes: minutes,
+						seconds: seconds,
+					};
+				}
+
+				function initializeClock(id, endTime) {
+					const clock = document.getElementById(id);
+					const daysSpan = clock.querySelector(".days");
+					const hoursSpan = clock.querySelector(".hours");
+					const minutesSpan = clock.querySelector(".minutes");
+					const secondsSpan = clock.querySelector(".seconds");
+
+					function updateClock() {
+						let t = getTimeRemaining(endTime);
+
+						daysSpan.innerHTML = t.days;
+						hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+						minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+						secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+
+						if (t.total <= 0) {
+							clearInterval(timeInterval);
+						}
+					}
+
+					updateClock();
+					var timeInterval = setInterval(updateClock, 1000);
+				}
+
+				initializeClock("countdown", "September 03 2022");
+
+				// Копирование номера в буфер
+				// const btnCopy = document.getElementById("copy");
+				// btnCopy.addEventListener("click", () => {
+				// 	let copyTextarea = document.createElement("textarea"),
+				// 		number = document.getElementById("number");
+
+				// 	copyTextarea.style.position = "fixed";
+				// 	copyTextarea.style.opacity = "0";
+				// 	copyTextarea.textContent = number.innerText;
+				// 	console.log(copyTextarea.textContent);
+
+				// 	document.body.appendChild(copyTextarea);
+				// 	copyTextarea.select();
+				// 	document.execCommand("copy");
+				// 	document.body.removeChild(copyTextarea);
+				// 	number.style.color = "#00cc66";
+				// });
+			});
+		</script>
+	</body>
+</html>
